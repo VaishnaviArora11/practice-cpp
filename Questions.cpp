@@ -497,5 +497,6 @@ int main(){
     int fact_nr = factorial(nr);
     int nCr = fact_n / (fact_r * fact_nr);
     cout<<nCr;
+    cout<<r;
 }
 
