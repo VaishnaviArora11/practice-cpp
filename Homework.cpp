@@ -125,26 +125,7 @@
 #include <iostream>
 using namespace std;
 
-int fibbo(int x){
-    int a = 0;
-    int b = 1;
-    int fib = 0; 
-    cout<<a<<", ";
-    for(int i = 1; i < x; i++){
-        fib = a + b;
-        cout<<fib<<", ";
-        a = b;
-        b = fib;
-    }
-    return a;
-}
-int main(){
-    int x;
-    cout<<"Enter a number : ";
-    cin>>x;
-    int fibbonacci = fibbo(x);
-    cout<<fibbonacci;
-}
+
 
 
 
