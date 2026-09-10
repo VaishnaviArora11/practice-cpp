@@ -119,13 +119,94 @@
 // }
 
 //FUNCTION FOR FIBONACCI:
+// int fibbo(int x){
+//     int a = 0;
+//     int b = 1;
+//     int fib = 0; 
+//     cout<<a<<", ";
+//     for(int i = 1; i < x; i++){
+//         fib = a + b;
+//         cout<<fib<<", ";
+//         a = b;
+//         b = fib;
+//     }
+//     return a;
+// }
+// int main(){
+//     int x;
+//     cout<<"Enter a number : ";
+//     cin>>x;
+//     int fibbonacci = fibbo(x);
+//     cout<<fibbonacci;
+// }
 
+//WAF SUM ALL ELEMENTS IN AN ARRAY:
+// int sum(int arr[], int size){
+//     int y = size - 1;
+//     int sumab = 0;
+//     for(int i = 0; i <= (size - 1); i++){
+//         int a = arr[y];
+//         sumab += a;
+//         y--;
+//     }
+//     return sumab;
+// }
+// int main(){
+//     int arr[]={4, 2, 7, 8, 1, 2, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     cout<<sum(arr, size);
+// }
+
+//WAF MINIMUM IN A FUNCTION:
+// int min(int arr[], int size){
+//     int y = size - 1;
+//     int min = INT_MAX;
+//     for(int i = 0; i < size; i++){
+//         if (arr[i] < min){
+//             min = arr[i];
+//         }      
+//     }
+//     return min;
+// }
+// int main(){
+//     int arr[]={4, 2, 7, 8, 1, 2, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     cout<<min(arr, size);
+// }
 
 
 #include <iostream>
+#include <climits>
 using namespace std;
 
+int min(int arr[], int size){
+    int y = size - 1;
+    int min = INT_MAX;
+    for(int i = 0; i < size; i++){
+        if (arr[i] < min){
+            min = arr[i];
+        }      
+    }
+    return min;
+}
+int maxi(int arr[], int size){
+    int y = size - 1;
+    int max = INT_MIN;
+    for(int i = 0; i < size; i++){
+        if (arr[i] > max){
+            max = arr[i];
+        }      
+    }
+    
+    return max;
+}
 
-
-
-
+int main(){
+    int arr[]={4, 2, 7, 8, 1, 2, 5};
+    int size = sizeof (arr) / sizeof (int);
+    cout<<maxi(arr, size);
+    cout<<min(arr, size);
+    int maximum = maxi(arr, size);
+    int minimum = min(arr, size);
+    
+}

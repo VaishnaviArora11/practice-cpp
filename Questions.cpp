@@ -473,35 +473,185 @@
 //     cout<<sum;
 // }
 
+//DECIMAL TO BINARY :
+// int main(){
+//     int decNum;
+//     cout<<"Enter the desired number : ";
+//     cin>>decNum;
+//     int qoutient;
+//     int digit = 1;
+//     int sum = 0;
+//     while (decNum > 0){
+//         int rem = decNum % 2;
+//         decNum = decNum / 2;
+//         sum = sum + (rem * digit);
+//         digit = digit * 10;
+//     }
+//     cout<<sum;
+// }
+
+//BINARY TO DECIMAL:
+// int main(){
+//     int binNum, digit;
+//     cout<<"Enter a number : ";
+//     cin>>binNum;
+//     int numBin;
+//     int power = 1;
+//     int sum = 0;
+//     while(binNum > 0){
+//        digit = binNum % 10;
+//        numBin = digit * power;
+//        sum = sum + numBin;
+//        power = power * 2;
+//        binNum = binNum / 10;
+//     }
+//     cout<<sum;
+// }
+ 
+//LOOP TO PRINT ALL MARKS IN AN ARRAY: 
+// int main(){
+//     int marks[5] = {50, 45, 60, 75, 90};
+//     int size = sizeof(marks) / sizeof(int);
+//     for(int i = 0; i < size; i++){
+//         cout<<marks[i]<<endl;
+//     }
+//     return 0;
+// }
+
+//INPUT MARKS IN AN ARRAY:
+// int main() {
+//     int size;
+//     cout << "Enter the number of children : " << endl;
+//     cin>>size;
+//     int marks[size];
+//     for(int i = 0; i < size + 1; i++){
+//         cout<<"Enter marks : "<<endl;
+//         cin>>marks[i];
+//     }
+//     return 0;
+// }
+
+//SMALLEST VALUE IN AN ARRAY:
+// int main(){
+//     int marks[5] = {50, 45, 60, 75, 90};
+//     int size = sizeof(marks) / sizeof (int);
+//     int smallest = INT_MAX;
+//     for(int i = 1; i < size; i++){
+//         if(marks[i] < smallest){
+//             smallest = marks[i];
+//         }
+//     }
+//     cout<<smallest;
+// }
+
+//NOTE:
+// Use #include <climits> for the INT_MAX to work and compile
+
+//SMALLEST VALUE IN ARRAY KA INDEX:
+// int main(){
+//     int marks[5] = {50, 45, 60, 75, 90};
+//     int size = sizeof(marks) / sizeof (int);
+//     int smallest = INT_MAX;
+//     int smallestIndex = 0;
+//     for(int i = 0; i < size; i++){
+//         if(marks[i] < smallest){
+//             smallest = marks[i];
+//             smallestIndex = i;
+//         }
+//     }
+//     cout<<smallestIndex;
+// }
+
+//LINEAR SEARCH IN ARRAY : NUM ENTERED KA INDEX :
+// Normal:
+// int main(){
+//     int x;
+//     int marks[5] = {50, 45, 60, 75, 90};
+//     int size = sizeof(marks) / sizeof (int);
+//     cout<<"Enter the number you want to find : ";
+//     cin>>x;
+//     int numindx;
+//     for(int i = 0; i < size; i++){
+//         if(marks[i] == x){
+//             numindx = i;
+//         }
+//     }
+//     cout<<numindx;
+// }
+// Linear Search:
+// int linearSearch (int marks[], int size, int x){
+//     for(int i = 0; i < size; i++){
+//         if(marks[i] == x){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// int main(){
+//     int x;
+//     int marks[5] = {50, 45, 60, 75, 90};
+//     int size = sizeof(marks) / sizeof (int);
+//     cout<<"Enter the number you want to find : ";
+//     cin>>x;
+//     cout << linearSearch(marks, size, x);
+//     return 0;
+// }
+
+//REVERSE AN ARRAY (OG< NOT COPY)
+// 2 pointer approach: Normal :
+// int main(){
+//     int arr[]={4, 2, 7, 8, 1, 2, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     int x = size - 1;
+//     for(int i = 0; i <= x; i++){
+//         swap(arr[i], arr[x]);
+//         x--;
+//     }
+//     for(int y = 0; y <= (size - 1); y++){
+//         cout<<arr[y];
+//     }
+// }
+// Function : 
+//  int sum(int arr[], int size){
+//     int y = size - 1;
+//     int sumab = 0;
+//     for(int i = 0; i <= (size - 1); i++){
+//         int a = arr[y];
+//         sumab += a;
+//         y--;
+//     }
+//     return sumab;
+// }
+// int main(){
+//     int arr[]={4, 2, 7, 8, 1, 2, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     cout<<sum(arr, size);
+// }
+
+
+
+
+
+
+
 
 
 #include <iostream>
 using namespace std;
 
-int factorial(int n){
-    int factor = 1;
-    for(int i = 1; i <= n; i++){
-        factor = factor * i;
+void interse(int arr1[], int size1, int arr2[], int size2){ //i > arr1 idx; y > arr2 idx
+    for(int i = 0; i < size1; i++){
+        for(int y = 0; y < size2; y++){
+            if (arr1[i] == arr2[y]){
+                cout << arr1[i] << " ";
+            }
+        }
     }
-    return factor;
 }
 int main(){
-    int n, r;
-    cout<<"Enter numbers n and r for nCr : "<<endl<<"Enter n : ";
-    cin>>n;
-    cout<<"Enter r : ";
-    cin>>r;
-    int nr = n - r;
-    int fact_n = factorial(n);
-    int fact_r = factorial(r);
-    int fact_nr = factorial(nr);
-    int nCr = fact_n / (fact_r * fact_nr);
-    cout<<nCr;
-    cout<<n;
+    int arr1[] = {3, 6, 9, 12, 15, 18, 21};
+    int size1 = sizeof (arr1) / sizeof (int);
+    int arr2[] = {2, 4, 6, 8, 10, 12, 14};
+    int size2 = sizeof (arr2) / sizeof (int);
+    interse(arr1, size1, arr2, size2);
 }
-//////////
-
-
-
-
-//aaaaaaaaaaaaaaaaaaaaa
