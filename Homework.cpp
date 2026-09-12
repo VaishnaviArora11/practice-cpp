@@ -174,39 +174,66 @@
 //     cout<<min(arr, size);
 // }
 
+//WAF TO SWAP MIN AND MAX IN AN ARRAY :
+// int mini(int arr[], int size){
+//     int min = INT_MAX;
+//     int minIndex;
+//     for(int i = 0; i < size; i++){
+//         if (arr[i] < min){
+//             min = arr[i];
+//             minIndex = i;
+//         }      
+//     }
+//     return minIndex;
+// }
+// int maxi(int arr[], int size){
+//     int y = size - 1;
+//     int max = INT_MIN;
+//     int maxIndex;
+//     for(int i = 0; i < size; i++){
+//         if (arr[i] > max){
+//             max = arr[i];
+//             maxIndex = i;
+//         }      
+//     }
+//     return maxIndex;
+// }
+// int main(){
+//     int arr[]={4, 2, 7, 8, 1, 2, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     int maximum = maxi(arr, size);
+//     int minimum = mini(arr, size);
+//     swap(arr[maximum], arr[minimum]);
+//     cout<<"New Array is : ";
+//     for (int i = 1; i <= size; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+//WAF TO PRINT UNIQUE NUMBERS IN AN ARRAY
+// void unq(int arr[], int size){  
+//     for (int i = 0; i < size; i++){ //number individual check
+//         int rep = 0;
+//         int num = 0;
+//         while (num < size){  //number jo i h usse sbke saath check
+//             if (arr[i] == arr[num]){
+//                 rep++;
+//             };
+//             num++;
+//         }  
+//         if (rep == 1){
+//             cout << arr[i] <<" ";
+//         }
+//     }
+// }
+
+// int main(){
+//     int arr[] = {4, 2, 3, 4, 7, 8, 9, 9, 7, 6, 5};
+//     int size = sizeof (arr) / sizeof (int);
+//     unq(arr, size);
+// }
+
 
 #include <iostream>
-#include <climits>
 using namespace std;
 
-int min(int arr[], int size){
-    int y = size - 1;
-    int min = INT_MAX;
-    for(int i = 0; i < size; i++){
-        if (arr[i] < min){
-            min = arr[i];
-        }      
-    }
-    return min;
-}
-int maxi(int arr[], int size){
-    int y = size - 1;
-    int max = INT_MIN;
-    for(int i = 0; i < size; i++){
-        if (arr[i] > max){
-            max = arr[i];
-        }      
-    }
-    
-    return max;
-}
-
-int main(){
-    int arr[]={4, 2, 7, 8, 1, 2, 5};
-    int size = sizeof (arr) / sizeof (int);
-    cout<<maxi(arr, size);
-    cout<<min(arr, size);
-    int maximum = maxi(arr, size);
-    int minimum = min(arr, size);
-    
-}
