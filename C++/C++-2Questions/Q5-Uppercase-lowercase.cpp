@@ -2,7 +2,7 @@
 
 // Input character
 // Check whether its uc or lc using if else 
-
+// Print Uppercase and Lowercase
 
 #include <iostream>
 using namespace std;
