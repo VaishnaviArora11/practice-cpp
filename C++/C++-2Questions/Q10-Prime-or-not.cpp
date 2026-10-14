@@ -19,8 +19,8 @@ int main (){
         } 
     } 
     if (prime >= 1){
-        cout << "YES";
-    } else {
         cout << "NO";
+    } else {
+        cout << "YES";
     }
 }
